@@ -30,7 +30,7 @@
 		var scrollRate = clientHeight/100;
 		var stop = (clientHeight*0.7);
 		
-		//Ивент для десктопа
+		
 		if(document.addEventListener){
 			if('onwheel' in document){
 				document.addEventListener("wheel",upRock)
@@ -43,7 +43,6 @@
 			document.attachEvent("onmousewheel", upRock);
 		}
 		
-		//Ивент для тачскрина
 		var touch;
 		var upOrDown;
 		document.addEventListener('touchstart', function(e){
@@ -59,11 +58,16 @@
 			upRock();
 		});
 		
+		
+
+		
 		//изменения при скроле
 		function upRock(e){
+		
 			e = e || window.event;
 			var delta = e.deltaY|| e.detail || e.wheelDelta ||e.wheelDelta || upOrDown;
 
+			
 			if (top*scrollRate < stop && delta>0){
 				div.style.top = (top++)*scrollRate + 'px';
 				div.style.borderRadius = top*scrollRate/clientHeight*72 + '%';
