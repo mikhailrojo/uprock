@@ -6,7 +6,6 @@
   <title>Uprock</title>
 </head>
 <body>
-<div id="touch"></div>
 <script>
 	(function(){
 		//высота экрана
@@ -20,7 +19,6 @@
 		div.style.marginRight = 'auto';
 		div.style.marginTop = clientHeight/10 + 'px';
 
-		
 		document.body.appendChild(div);
 		// рандомный цвет при создании
 		var color = Math.ceil(Math.random()*360);	
@@ -29,7 +27,6 @@
 		var top = 0;
 		var scrollRate = clientHeight/100;
 		var stop = (clientHeight*0.7);
-		
 		
 		if(document.addEventListener){
 			if('onwheel' in document){
@@ -57,9 +54,6 @@
 			}
 			upRock();
 		});
-		
-		
-
 		
 		//изменения при скроле
 		function upRock(e){
